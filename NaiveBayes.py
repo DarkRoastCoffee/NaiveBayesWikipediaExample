@@ -8,7 +8,8 @@ training_data = np.array([
 	[5.92, 165, 10],
 	[5, 100, 6],
 	[5.5, 150, 8],
-	[5.42, 130, 7], 
+	[5.42, 130, 7]
+	, 
 	[5.75, 150, 9]])
 
 training_target = np.array([
@@ -25,4 +26,6 @@ sample = np.array([6, 130, 8])
 
 gnb = GaussianNB()
 
-print gnb.fit(training_data, training_target).predict(sample)
+trained = gnb.fit(training_data, training_target)
+
+print trained.predict(sample)
